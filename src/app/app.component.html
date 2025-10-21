@@ -1,2 +1,9 @@
 <app-header/>
-<app-user-input/>
+<app-user-input
+    (estimatedInvestments)="estimatedInvestments = $event"/>
+
+@if (estimatedInvestments.length > 0) {
+    <app-investment-result [data]="estimatedInvestments"/>
+} @else {
+    <p class="center">Enter your investment details to see the results</p>
+}

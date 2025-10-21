@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from "./header/header.component";
 import {UserInputComponent} from "./user-input/user-input.component";
+import {InvestmentResultComponent} from "./investment-result/investment-result.component";
+import {EstimatedInvestment} from "./investment.model";
 
 @Component({
     selector: 'app-root',
@@ -8,7 +10,10 @@ import {UserInputComponent} from "./user-input/user-input.component";
     templateUrl: './app.component.html',
     imports: [
         HeaderComponent,
-        UserInputComponent
+        UserInputComponent,
+        InvestmentResultComponent
     ]
 })
-export class AppComponent {}
+export class AppComponent {
+    estimatedInvestments: EstimatedInvestment[] = []
+}
